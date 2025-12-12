@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "posts/create"
   root "posts#index"
   resources :posts do
+    resources :comments
     member do
       get 'preview'
     end
